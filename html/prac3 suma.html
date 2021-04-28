@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/prac3.css">
+</head>
+<body>
+    <div class="contenedor">
+        <form action="">
+            <input id="numero1" type="text">
+            <p>+</p>
+            <input id="numero2" type="text">
+            <p>=</p>
+            <input id="resultado" type="text" readonly>
+            <input id="resultadoParImpar" type="text" readonly>
+            <input type="button" class="btn" onclick="ParImpar()" value="Resultado">
+        </form>
+    </div>
+        <script>
+            function ParImpar(numero1,numero2)
+            {
+                var num1 =parseFloat(document.getElementById('numero1').value);
+                var num2 =parseFloat(document.getElementById('numero2').value);
+                var res1 =num1+num2;
+                document.getElementById('resultado').value=res1;
+                var resultadoLiteral="par"
+
+                if(res1%2===0)
+                {
+                    document.getElementById('resultadoParImpar').value="La Resultado Es Par"; 
+                }
+                else
+                {
+                    document.getElementById('resultadoParImpar').value="La Resultado Es Impar"; 
+                }
+
+            }
+        </script>
+    
+</body>
+</html>

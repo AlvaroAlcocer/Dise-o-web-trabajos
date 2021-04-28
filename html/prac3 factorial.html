@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/prac3.css">
+</head>
+<body>
+    <div class="contenedor">
+        <form action="">
+            <input id="numero1" type="text">
+            <input id="resultado" type="text" readonly>
+            <input type="button" class="btn" onclick="Factorial()" value="Resultado">
+        </form>
+    </div>
+        <script>
+            function Factorial()
+            {
+                var num1 =parseFloat(document.getElementById('numero1').value);
+                var res1 =1;
+                for (var i=1; i<=num1; i++)
+                {
+                    res1= res1* i;
+                }
+                document.getElementById('resultado').value=res1;
+            }
+        </script>
+    
+</body>
+</html>
